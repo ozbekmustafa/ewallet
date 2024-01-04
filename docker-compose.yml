@@ -1,0 +1,30 @@
+version: '3'
+services:
+  ewalletapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/eWalletDb
+      - REDIS_HOST=redis
+    depends_on:
+      - mongo
+      - redis
+    command: npm start
+
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodata:/data/db
+
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+
+volumes:
+  mongodata:

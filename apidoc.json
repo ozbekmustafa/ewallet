@@ -1,0 +1,26 @@
+{
+  "name": "Gamfibo eWallet API Documentation",
+  "version": "1.0.0",
+  "description": "Documentation for the Gamfibo eWallet API. This API allows users to manage their eWallet, including account creation, transactions, and support ticket interactions.",
+  "title": "Gamfibo eWallet API",
+  "sampleUrl": false,
+  "header": {
+      "title": "Introduction",
+      "content": "<h2>Welcome to the Gamfibo eWallet API Documentation</h2><p>This documentation provides an overview of all the API endpoints, their required parameters, and expected responses.</p>"
+  },
+  "footer": {
+      "title": "Gamfibo eWallet API",
+      "content": "<p>© 2024 Gamfibo. All rights reserved.</p>"
+  },
+  "template": {
+      "withCompare": true,
+      "withGenerator": true
+  },
+  "include": [
+      "routes/userRoutes.js",
+      "routes/accountRoutes.js",
+      "routes/transactionRoutes.js",
+      "routes/supportTicketRoutes.js"
+  ],
+  "exclude": []
+}
