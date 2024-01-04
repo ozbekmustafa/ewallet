@@ -7,7 +7,7 @@ const redisClient = require('../libs/redis');
 exports.createUser = async (req, res) => {
     try {
         const { username, email, password, role, phoneNumber, identityNumber } = req.body;
-        const accessToken = req.headers.authorization; // Access token'ı al
+        const accessToken = req.headers.authorization;
         if (!accessToken) {
             return res.status(403).json({ message: 'Access token is required' });
         }
